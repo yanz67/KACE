@@ -5,7 +5,7 @@
 
 function click(e) {
   chrome.tabs.executeScript(null,
-      {code:'var option = e.target.id'},function() {chrome.tabs.executeScript(null,
+      {code:"var option ='" + e.target.id + "'"},function() {chrome.tabs.executeScript(null,
 		{ file: "jquery.js" },function() {chrome.tabs.executeScript(null,
 	  { file: "SetKace.js" })})});
   window.close();
